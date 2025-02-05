@@ -14,20 +14,20 @@ class Observable<T> {
     
     var value: T {
         didSet {
-            
+            closure?(value)
         }
     }
     
-    init(value: T) {
+    init(_ value: T) {
         self.value = value
     }
     
-    func bind(closure: @escaping ((T) -> Void)) {
+    func bind(closure: @escaping (T) -> Void) {
         closure(value) //  초기값도 사용해야할때
         self.closure = closure
     }
     
-    func lazybind(closure: @escaping ((T) -> Void)) {
+    func lazybind(closure: @escaping (T) -> Void) {
         self.closure = closure
     }
     

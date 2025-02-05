@@ -10,6 +10,8 @@ import SnapKit
 
 class CurrencyViewController: UIViewController {
     
+    let viewModel = CurrencyViewModel()
+    
     private let exchangeRateLabel: UILabel = {
         let label = UILabel()
         label.text = "현재 환율: 1 USD = 1,445 KRW"
@@ -51,6 +53,13 @@ class CurrencyViewController: UIViewController {
         setupUI()
         setupConstraints()
         setupActions()
+        
+        viewModel.outputText.bind { text in
+            print("outputText:", text)
+            self.resultLabel.text = text
+        }
+        
+        
     }
      
     private func setupUI() {
@@ -88,16 +97,14 @@ class CurrencyViewController: UIViewController {
     private func setupActions() {
         convertButton.addTarget(self, action: #selector(convertButtonTapped), for: .touchUpInside)
     }
-     
+     // 이걸내가 해야해? 여기서 나는 값만 주고 싶다 ! 배쩨 !
     @objc private func convertButtonTapped() {
-        guard let amountText = amountTextField.text,
-              let amount = Double(amountText) else {
-            resultLabel.text = "올바른 금액을 입력해주세요"
-            return
-        }
         
-        let exchangeRate = 1445.0 // 실제 환율 데이터로 대체 필요
-        let convertedAmount = amount / exchangeRate
-        resultLabel.text = String(format: "%.2f USD (약 $%.2f)", convertedAmount, convertedAmount)
+//        if let amountText = amountTextField.text {
+//            if let num = Double(amountText) {
+//                viewModel.inputAmount.value = num
+//            }
+//        }
+        viewModel.inputAmount.value = amountTextField.text
     }
 }
