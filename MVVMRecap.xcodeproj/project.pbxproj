@@ -15,7 +15,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4DCB5E702D5352D100C073CB /* Exceptions for "MVVMRecap" folder in "MVVMRecap" target */ = {
+		4DCB5EC92D53A9F600C073CB /* Exceptions for "MVVMRecap" folder in "MVVMRecap" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -25,10 +25,10 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		4DCB5E602D5352CF00C073CB /* MVVMRecap */ = {
+		4DCB5EBD2D53A9F600C073CB /* MVVMRecap */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				4DCB5E702D5352D100C073CB /* Exceptions for "MVVMRecap" folder in "MVVMRecap" target */,
+				4DCB5EC92D53A9F600C073CB /* Exceptions for "MVVMRecap" folder in "MVVMRecap" target */,
 			);
 			path = MVVMRecap;
 			sourceTree = "<group>";
@@ -50,7 +50,7 @@
 		4DCB5E552D5352CF00C073CB = {
 			isa = PBXGroup;
 			children = (
-				4DCB5E602D5352CF00C073CB /* MVVMRecap */,
+				4DCB5EBD2D53A9F600C073CB /* MVVMRecap */,
 				4DCB5E5F2D5352CF00C073CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,7 +79,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				4DCB5E602D5352CF00C073CB /* MVVMRecap */,
+				4DCB5EBD2D53A9F600C073CB /* MVVMRecap */,
 			);
 			name = MVVMRecap;
 			packageProductDependencies = (

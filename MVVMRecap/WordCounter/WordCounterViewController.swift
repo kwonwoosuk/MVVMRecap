@@ -70,8 +70,6 @@ class WordCounterViewController: UIViewController {
      // 분리 대상
     private func updateCharacterCount() {
         viewModel.inputText.value = textView.text
-        
-        
     }
 }
  
