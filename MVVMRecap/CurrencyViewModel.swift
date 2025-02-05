@@ -9,9 +9,9 @@ import Foundation
 
 class CurrencyViewModel {
     
-//    var inputAmount: Observable<Int?> = Observable(nil) 바꿔서 넘겨줄거면 넌 뭐하러 있냐?
+    //    var inputAmount: Observable<Int?> = Observable(nil) 바꿔서 넘겨줄거면 넌 뭐하러 있냐?
     var inputAmount: Observable<String?> = Observable(nil)
-//    var convertButtonTapped = Observable(())
+    //    var convertButtonTapped = Observable(())
     var outputText = Observable("")
     
     init() {
@@ -20,7 +20,6 @@ class CurrencyViewModel {
             self.validation()
         }
     }
-    
     
     private func validation() {
         
